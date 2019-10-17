@@ -23,6 +23,9 @@ class Graph:
 
          print("After bellman ford")
          self.print_paths(dist)
+         print("After Bellman ford")
+         for i in range(self.vertex):
+            print(f"{i}--->{dist[i]}")
          for i in self.graph:
             if dist[u]+w<dist[v]:
                 print(f"Edge ({u},{v},{w}) effected by cycle")
@@ -30,7 +33,7 @@ class Graph:
 
 
 if __name__=="__main__":
-   graph=Graph(6)
+   graph=Graph(5)
    graph.add_edges(0,1,-1)
    graph.add_edges(0,2,4)
    graph.add_edges(1,2,3)
